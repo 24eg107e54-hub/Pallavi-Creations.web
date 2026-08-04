@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4b1350, #7a2678, #9a4f97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.box {
+  background: #fffaf0;
+  width: 380px;
+  padding: 40px 34px;
+  border-radius: 14px;
+  border-top: 6px solid #e8b23c;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #4b1350;
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+p.sub {
+  text-align: center;
+  color: #a583a3;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.tabs {
+  display: flex;
+  background: #f1e2ef;
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 26px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6a2168;
+  border-radius: 26px;
+  transition: all 0.25s ease;
+}
+
+.tabs button.active {
+  background: linear-gradient(90deg, #e8b23c, #f3d98b);
+  color: #4b1350;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+form {
+  display: none;
+  flex-direction: column;
+}
+
+form.active {
+  display: flex;
+}
+
+label {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #6a2168;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+input {
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.5px solid #e6d7e4;
+  background: #fdf6fa;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+input:focus {
+  border-color: #e8b23c;
+  background: #fff;
+}
+
+button.submit {
+  background: linear-gradient(90deg, #6a2168, #9a4f97);
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(106,33,104,0.3);
+  transition: transform 0.2s ease;
+}
+
+button.submit:hover {
+  transform: translateY(-2px);
+}
+
+.switch {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+  color: #7a6379;
+}
+
+.switch a {
+  color: #6a2168;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1.5px solid #e8b23c;
+}
