@@ -1,0 +1,108 @@
+// ---------- Shared helpers ----------
+function showError(msg) {
+    alert(msg);
+}
+
+// ---------- Login validation ----------
+function validateLogin(e) {
+    if (e) e.preventDefault();
+
+    const email =
+        document.getElementById('loginEmail').value.trim();
+
+    const pass =
+        document.getElementById('loginPassword').value;
+
+    const rules = [
+        [
+            email,
+            /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+            "Enter a valid email, e.g. name@example.com"
+        ],
+        [
+            pass,
+            /^.{6,}$/,
+            "Password must be at least 6 characters"
+        ]
+    ];
+
+    for (const [value, pattern, msg] of rules) {
+        if (!pattern.test(value)) {
+            showError(msg);
+            return false;
+        }
+    }
+
+    // Hook up your real authentication call
+    // here (fetch/AJAX to your backend).
+
+    alert("Login successful!");
+    return true;
+}
+
+
+// ---------- Signup validation ----------
+function validateForm(e) {
+    if (e) e.preventDefault();
+
+    const name =
+        document.getElementById('signupName').value.trim();
+
+    const email =
+        document.getElementById('signupEmail').value.trim();
+
+    const phone =
+        document.getElementById('signupPhone').value.trim();
+
+    const address =
+        document.getElementById('signupAddress').value.trim();
+
+    const pass =
+        document.getElementById('signupPassword').value;
+
+    const confirm =
+        document.getElementById('signupConfirm').value;
+
+    const rules = [
+        [
+            name,
+            /^[A-Za-z\s]{2,}$/,
+            "Name must contain only letters (min 2 chars)"
+        ],
+        [
+            email,
+            /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+            "Enter a valid email, e.g. name@example.com"
+        ],
+        [
+            phone,
+            /^[0-9]{10}$/,
+            "Enter a valid 10-digit phone number"
+        ],
+        [
+            pass,
+            /^(?=.*[A-Za-z])(?=.*\d).{6,}$/,
+            "Password needs 6+ chars with letters & numbers"
+        ],
+        [
+            confirm,
+            new RegExp(
+                `^${pass.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`
+            ),
+            "Passwords do not match"
+        ]
+    ];
+
+    for (const [value, pattern, msg] of rules) {
+        if (!pattern.test(value)) {
+            showError(msg);
+            return false;
+        }
+    }
+
+    // Address is optional; add it to `rules`
+    // above if you want it mandatory.
+
+    alert("Registration successful!");
+    return true;
+}
