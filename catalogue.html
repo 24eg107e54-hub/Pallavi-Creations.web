@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Catalogue - Pallavi Creations</title>
+
+    <link rel="stylesheet" href="catalogue.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Pallavi Creations</h1>
+
+    <nav>
+        <a href="home-page.html">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="top">
+    <h2>Our Catalogue</h2>
+
+    <input type="text"
+           id="search"
+           placeholder="Search products">
+
+    <select id="category">
+        <option value="all">All Categories</option>
+        <option value="saree">Designer Sarees</option>
+        <option value="dress">Dress Materials</option>
+        <option value="jewelry">Jewelry</option>
+    </select>
+</section>
+
+
+<main id="products">
+
+    <div class="card" data-category="saree">
+        <img src="images/silk-saree.svg" alt="Silk Saree">
+        <h3>Silk Saree</h3>
+        <p>₹2,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="saree">
+        <img src="images/georgette-saree.svg" alt="Georgette Saree">
+        <h3>Georgette Saree</h3>
+        <p>₹1,899</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="saree">
+        <img src="images/organza-saree.svg" alt="Organza Saree">
+        <h3>Organza Saree</h3>
+        <p>₹3,099</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="saree">
+        <img src="images/linen-saree.svg" alt="Linen Saree">
+        <h3>Linen Saree</h3>
+        <p>₹1,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="dress">
+        <img src="images/silk-material.svg" alt="Silk Dress Material">
+        <h3>Silk Dress Material</h3>
+        <p>₹1,299</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="dress">
+        <img src="images/cotton-material.svg" alt="Cotton Dress Material">
+        <h3>Cotton Dress Material</h3>
+        <p>₹899</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="dress">
+        <img src="images/rayon-material.svg" alt="Rayon Dress Material">
+        <h3>Rayon Dress Material</h3>
+        <p>₹999</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="jewelry">
+        <img src="images/gold-necklace.svg" alt="Gold Necklace">
+        <h3>Gold Necklace</h3>
+        <p>₹1,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="jewelry">
+        <img src="images/jhumka-earring.svg" alt="Jhumka Earrings">
+        <h3>Jhumka Earrings</h3>
+        <p>₹699</p>
+        <button>Add to Cart</button>
+    </div>
+
+
+    <div class="card" data-category="jewelry">
+        <img src="images/designer-bangles.svg" alt="Designer Bangles">
+        <h3>Designer Bangles</h3>
+        <p>₹599</p>
+        <button>Add to Cart</button>
+    </div>
+
+</main>
+
+<script src="catalogue.js"></script>
+
+</body>
+</html>
