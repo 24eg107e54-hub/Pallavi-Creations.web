@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products SYSTEM "products.dtd">
+
+<products>
+    <product>
+        <name>Silk Saree</name>
+        <category>Designer Sarees</category>
+        <fabric>Silk</fabric>
+        <price>2499</price>
+    </product>
+
+    <product>
+        <name>Georgette Saree</name>
+        <category>Designer Sarees</category>
+        <fabric>Georgette</fabric>
+        <price>1899</price>
+    </product>
+
+    <product>
+        <name>Organza Saree</name>
+        <category>Designer Sarees</category>
+        <fabric>Organza</fabric>
+        <price>2199</price>
+    </product>
+
+    <product>
+        <name>Cotton Dress Material</name>
+        <category>Dress Material</category>
+        <fabric>Cotton</fabric>
+        <price>899</price>
+    </product>
+
+    <product>
+        <name>Gold Necklace</name>
+        <category>Jewelry</category>
+        <type>Necklace</type>
+        <price>1499</price>
+    </product>
+</products>

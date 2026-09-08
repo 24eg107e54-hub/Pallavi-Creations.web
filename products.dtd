@@ -1,0 +1,13 @@
+<!ELEMENT products (product)>
+
+<!ELEMENT product (name,category,fabric?,type?,price)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT category (#PCDATA)>
+
+<!ELEMENT fabric (#PCDATA)>
+
+<!ELEMENT type (#PCDATA)>
+
+<!ELEMENT price (#PCDATA)>
