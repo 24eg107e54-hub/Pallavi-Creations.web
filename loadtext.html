@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Load Text-Fetch API</title></head>
+    <body>
+        <button onclick="loadText()">Load Text File</button>
+        <div id="output" style="margin-top:15px; white-space:pre-line;"></div>
+
+        <script>
+            function loadText(){
+                fetch('notes.txt')
+                .then(responce => {
+                    if(!responce.ok) throw new Error('Network error: ' + responce.status);
+                    return response.text();
+
+                })
+                .then(data => {
+                    document.getElementById('output').innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById('output').innerText = 'Error: '+error.message;
+                });
+            }
+        </script>
+    </body>
+</html>

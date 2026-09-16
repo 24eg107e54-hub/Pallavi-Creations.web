@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Parse JSON/XML - Fetch API</title></head>
+    <body>
+        <button onclick="loadJSON()">Load JSON Books</button>
+        <button onclick="loadXML()">Load XML Books</button>
+        <div id="output"></div>
+        
+        
+        <script> 
+            function loadJSON(){
+                fetch('books.json')
+                .then(res => res.json())
+                .then(books => {
+                    let html = '<h3>Books from JSON</h3><ul>';
+                        books.forEach(b => {
+                            html += '<li>${b.title} by ${b.author} - Rs. ${b.price}</li>';
+                        });
+
+                        html += '</ul>';
+                        document.getElementById('output').innerHTML = html;
+                });
+            }
+
+            function loadXML(){
+                fetch('books.xml')
+                .then(res => res.text())
+                .then(str => new DOMParser().parseFromString(str, 'text/xml'))
+                .then(xml => {
+                    const books = xml.getElementByTagName('book');
+                    let html = '<h3>Books from XML</h3><ul>';
+                        for (let i = 0; i<books.length; i++){
+                            const title = books[i].getElementByTagName('title')[0].textContent;
+                            const author = books[i].getElementByTagName('author')[0].textContent;
+                            html +='<li>${title} by ${author}</li>';
+                        }
+                        html += '</ul>';
+                        document.getElementById('output').innerHTML = html;
+                });
+            }
+        </script>
+    </body>
+</html>
